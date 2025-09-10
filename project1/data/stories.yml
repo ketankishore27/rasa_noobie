@@ -1,0 +1,21 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: action_get_login_details
+
+- story: express thanks
+  steps:
+  - intent: thank
+  - action: utter_thank
+
+- story: order food
+  steps:
+  - intent: order_food
+  - action: action_ask_order_detail
+  - intent: food_order
+  - action: action_extract_order_detail
+  
